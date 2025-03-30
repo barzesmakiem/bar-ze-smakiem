@@ -82,7 +82,7 @@ const Hero = () => {
             viewport={{ once: false, amount: 0.1 }}
             className='hidden xl:flex xl:absolute xl:top-[200px] xl:right-0'
           >
-            <Image src='/hero/plate.png' width={756} height={682} alt='' />
+            <Image src='/bar-ze-smakiem/hero/plate.png' width={756} height={682} alt='' />
           </motion.div>
         </div>
       </div>
