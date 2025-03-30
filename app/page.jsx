@@ -21,7 +21,7 @@ export default async function Home() {
 
   return (
     <main className='w-full max-w-[1440px] bg-white mx-auto overflow-hidden'>
-      <Header />
+      <Header showZamowienia={ofertaData.show} />
       <Hero />
       <Menu menuData={menuData} />
       <Zamowienia data={ofertaData} />

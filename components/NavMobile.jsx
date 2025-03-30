@@ -11,16 +11,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './ui/button';
 
-const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
+const NavMobile = ({ containerStyles, iconStyles, linkStyles, showZamowienia }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showZamowienia, setShowZamowienia] = useState(false);
-
-  useEffect(() => {
-    fetch('/api/oferta')
-      .then(res => res.json())
-      .then(data => setShowZamowienia(data.show))
-      .catch(() => setShowZamowienia(false));
-  }, []);
 
   const links = [
     { icon: <RiHomeFill />, path: 'home', name: 'strona główna', offset: -50 },

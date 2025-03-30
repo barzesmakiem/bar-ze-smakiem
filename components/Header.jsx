@@ -2,14 +2,13 @@
 import React, { useState, useEffect } from 'react';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 
 import Nav from './Nav';
 import NavMobile from './NavMobile';
 import { Button } from './ui/button';
 
-const Header = () => {
+const Header = ({ showZamowienia }) => {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -38,25 +37,29 @@ const Header = () => {
         <div className='flex items-center justify-between'>
           {/* logo */}
           <Image
-          src="/bar-ze-smakiem/logo.png"
-          alt="Bar ze Smakiem logo"
-          width={0}
-          height={0}
-          sizes="100vw"
-          className="h-20 w-auto"
+            src="/bar-ze-smakiem/logo.png"
+            alt="Bar ze Smakiem logo"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="h-20 w-auto"
           />
-          {/* nav */}
+
+          {/* desktop nav */}
           <Nav
             containerStyles='hidden xl:flex gap-x-12 text-white'
             linkStyles='capitalize'
           />
-          {/* btn */}
+
+          {/* spacer or button */}
           <div className="hidden xl:block w-[120px]"></div>
+
           {/* mobile nav */}
           <NavMobile
             containerStyles='xl:hidden'
             iconStyles='text-3xl'
             linkStyles='uppercase'
+            showZamowienia={showZamowienia}
           />
         </div>
       </div>
