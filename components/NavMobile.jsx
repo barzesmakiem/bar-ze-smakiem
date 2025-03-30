@@ -16,12 +16,12 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles, showZamowienia }) 
 
   const links = [
     { icon: <RiHomeFill />, path: 'home', name: 'strona główna', offset: -50 },
-    { icon: <BiSolidFoodMenu />, path: 'menu', name: 'menu', offset: -50 },
+    { icon: <BiSolidFoodMenu />, path: 'menu', name: 'menu', offset: -70 },
     showZamowienia && {
       icon: <MdShoppingCart />,
       path: 'zamowienia',
       name: 'zamówienia',
-      offset: -100,
+      offset: -120,
     },
     { icon: <FaUsers />, path: 'about', name: 'o nas', offset: -150 },
     { icon: <FaEnvelope />, path: 'contact', name: 'kontakt', offset: -100 },
