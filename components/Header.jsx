@@ -37,7 +37,7 @@ const Header = ({ showZamowienia }) => {
         <div className='flex items-center justify-between'>
           {/* logo */}
           <Image
-            src="/bar-ze-smakiem/logo.png"
+            src="/bar-ze-smakiem/logo2.png"
             alt="Bar ze Smakiem logo"
             width={0}
             height={0}
