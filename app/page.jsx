@@ -1,4 +1,3 @@
-import StyleGuide from '@/components/StyleGuide';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Menu from '@/components/Menu';
@@ -7,19 +6,20 @@ import Reservation from '@/components/Reservation';
 import About from '@/components/About';
 import Map from '@/components/Map';
 import Footer from '@/components/Footer';
+import { readMenuExcel } from '@/lib/readMenuExcel';
 
-export default function Home() {
+export default async function Home() {
+  const menuData = await readMenuExcel();
+
   return (
     <main className='w-full max-w-[1440px] bg-white mx-auto overflow-hidden'>
       <Header />
       <Hero />
-      <Menu />
+      <Menu menuData={menuData} />
       <Zamowienia />
       <About />
       <Map />
       <Footer />
-      {/* <StyleGuide /> */}
-      {/* <div className='h-[4000px]'></div> */}
     </main>
   );
 }
