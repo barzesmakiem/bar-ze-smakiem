@@ -78,6 +78,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
                 offset={link.offset}
                 smooth={false}
                 className='flex items-center gap-x-3'
+                onClick={() => setIsOpen(false)}
               >
                 <div className={`${iconStyles}`}>{link.icon}</div>
                 <div className={`${linkStyles}`}>{link.name}</div>
