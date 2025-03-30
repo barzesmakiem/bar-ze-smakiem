@@ -33,6 +33,7 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@types/node": "^22.13.14",
     "@types/react": "19.0.12",
     "autoprefixer": "^10.0.1",
     "postcss": "^8",
