@@ -45,7 +45,7 @@ const About = () => {
       {/* img */}
       <div>
         <Image
-          src='/bar-ze-smakiem/map/barzoom.png'
+          src='/map/barzoom.png'
           width={705}
           height={771}
           alt=''

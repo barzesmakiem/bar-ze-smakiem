@@ -49,7 +49,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles, showZamowienia }) 
           {/* logo */}
           <div className='mt-16 mb-8'>
             <Image
-              src="/bar-ze-smakiem/logo.png"
+              src="/logo.png"
               alt="Bar ze Smakiem logo"
               width={0}
               height={0}

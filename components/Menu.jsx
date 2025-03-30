@@ -58,7 +58,7 @@ const Menu = ({ menuData }) => {
               <div className='overflow-hidden'>
                 {item.img ? (
                   <Image
-                    src={`/bar-ze-smakiem${item.img}`}
+                    src={`${item.img}`}
                     width={270}
                     height={270}
                     alt={item.title}
@@ -94,13 +94,13 @@ const Menu = ({ menuData }) => {
             </button>
             <h3 className="text-2xl font-semibold mb-4 text-center">Galeria</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              <Image src="/bar-ze-smakiem/photos/schabowyzjajkiem.jpeg" alt="" width={300} height={200} />
-              <Image src="/bar-ze-smakiem/photos/udkozkurczakazryzem.jpeg" alt="" width={300} height={200} />
-              <Image src="/bar-ze-smakiem/photos/bitkizcebula.jpeg" alt="" width={300} height={200} />
-              <Image src="/bar-ze-smakiem/photos/placekpozbojnicku.jpeg" alt="" width={300} height={200} />
-              <Image src="/bar-ze-smakiem/photos/spaghettibolognese.jpeg" alt="" width={300} height={200} />
-              <Image src="/bar-ze-smakiem/photos/udkozkurczakazmarchewka.jpeg" alt="" width={300} height={200} />
-              <Image src="/bar-ze-smakiem/photos/salatkazjajkiem.jpeg" alt="" width={300} height={200} />
+              <Image src="/photos/schabowyzjajkiem.jpeg" alt="" width={300} height={200} />
+              <Image src="/photos/udkozkurczakazryzem.jpeg" alt="" width={300} height={200} />
+              <Image src="/photos/bitkizcebula.jpeg" alt="" width={300} height={200} />
+              <Image src="/photos/placekpozbojnicku.jpeg" alt="" width={300} height={200} />
+              <Image src="/photos/spaghettibolognese.jpeg" alt="" width={300} height={200} />
+              <Image src="/photos/udkozkurczakazmarchewka.jpeg" alt="" width={300} height={200} />
+              <Image src="/photos/salatkazjajkiem.jpeg" alt="" width={300} height={200} />
             </div>
           </div>
         </div>

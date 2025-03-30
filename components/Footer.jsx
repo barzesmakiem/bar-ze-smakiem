@@ -18,7 +18,7 @@ const Footer = () => {
           {/* logo */}
           <div className='w-[300px] mb-8 xl:mb-0'>
             <Image
-              src="/bar-ze-smakiem/logo.png"
+              src="/logo.png"
               alt="Bar ze Smakiem logo"
               width={0}
               height={0}
