@@ -23,16 +23,16 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles }) => {
   }, []);
 
   const links = [
-    { icon: <RiHomeFill />, path: 'home', name: 'strona główna', offset: 0 },
-    { icon: <BiSolidFoodMenu />, path: 'menu', name: 'menu', offset: 0 },
+    { icon: <RiHomeFill />, path: 'home', name: 'strona główna', offset: -50 },
+    { icon: <BiSolidFoodMenu />, path: 'menu', name: 'menu', offset: -50 },
     showZamowienia && {
       icon: <MdShoppingCart />,
       path: 'zamowienia',
       name: 'zamówienia',
-      offset: -50,
+      offset: -100,
     },
-    { icon: <FaUsers />, path: 'about', name: 'o nas', offset: -50 },
-    { icon: <FaEnvelope />, path: 'contact', name: 'kontakt', offset: 0 },
+    { icon: <FaUsers />, path: 'about', name: 'o nas', offset: -150 },
+    { icon: <FaEnvelope />, path: 'contact', name: 'kontakt', offset: -100 },
   ].filter(Boolean);
 
   return (
