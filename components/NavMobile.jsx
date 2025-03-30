@@ -28,19 +28,16 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles, showZamowienia }) 
   return (
     <div className={`${containerStyles}`}>
       {/* nav trigger btn */}
-      <div
-        onClick={() => setIsOpen(!isOpen)}
-        className='cursor-pointer outline-none'
-      >
+      <div onClick={() => setIsOpen(!isOpen)} className='cursor-pointer outline-none'>
         <RiMenu2Line className='text-3xl text-white transition-all duration-200' />
       </div>
 
       <aside
-        className={`$ {
+        className={`${
           isOpen ? 'right-0' : '-right-full'
         } bg-[#121212] fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500`}
       >
-        <div className='flex flex-col items-center justify-between h-full'>
+        <div className='relative flex flex-col items-center h-full'>
           {/* nav close btn */}
           <div
             onClick={() => setIsOpen(false)}
@@ -50,17 +47,19 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles, showZamowienia }) 
           </div>
 
           {/* logo */}
-          <Image
-            src="/bar-ze-smakiem/logo.png"
-            alt="Bar ze Smakiem logo"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-auto h-[120px] md:h-[180px] xl:h-[220px]"
-          />
+          <div className='mt-16 mb-8'>
+            <Image
+              src="/bar-ze-smakiem/logo.png"
+              alt="Bar ze Smakiem logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-auto h-[120px] md:h-[180px] xl:h-[220px]"
+            />
+          </div>
 
-          {/* links - added wrapper div with margin-top adjustment */}
-          <div className='flex flex-col gap-y-8' style={{ marginTop: '-200px' }}>
+          {/* links moved upward by using negative margin */}
+          <div className='flex flex-col gap-y-8 -mt-20'>
             {links.map((link, index) => (
               <ScrollLink
                 key={index}
@@ -75,8 +74,6 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles, showZamowienia }) 
               </ScrollLink>
             ))}
           </div>
-
-          {/* optional CTA button can go here */}
         </div>
       </aside>
     </div>
