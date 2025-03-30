@@ -39,12 +39,11 @@ const Header = ({ showZamowienia }) => {
           <Image
             src="/bar-ze-smakiem/logo2.png"
             alt="Bar ze Smakiem logo"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="h-5 w-auto"
+            width={100} // any non-zero placeholder value
+            height={24} // matches h-6
+            className="h-6 w-auto"
+            priority
           />
-
           {/* desktop nav */}
           <Nav
             containerStyles='hidden xl:flex gap-x-12 text-white'
