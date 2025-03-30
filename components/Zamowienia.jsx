@@ -1,17 +1,10 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-const Zamowienia = () => {
-  const [data, setData] = useState({ show: false, title: '', subtext: '', oferta: [] });
+const Zamowienia = ({ data }) => {
+  const [showDetails, setShowDetails] = useState(false);
 
-  useEffect(() => {
-    fetch('/api/oferta')
-      .then(res => res.json())
-      .then(setData)
-      .catch(() => setData({ show: false }));
-  }, []);
-
-  if (!data.show) return null;
+  if (!data?.show) return null;
 
   return (
     <section className="relative pt-0 pb-12 xl:pt-12 xl:pb-24 bg-menu" id="zamowienia">
