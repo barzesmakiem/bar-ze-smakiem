@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 import { readMenuExcel } from '@/lib/readMenuExcel';
 import { readOfertaExcel } from '@/lib/readExcel'; 
 
@@ -11,7 +14,10 @@ import Footer from '@/components/Footer';
 
 export default async function Home() {
   const menuData = await readMenuExcel();
-  const ofertaData = await readOfertaExcel();  
+
+  const ofertaPath = path.join(process.cwd(), 'public', 'oferta.xlsx');
+  const buffer = fs.readFileSync(ofertaPath);
+  const ofertaData = readOfertaExcel(buffer);
 
   return (
     <main className='w-full max-w-[1440px] bg-white mx-auto overflow-hidden'>
@@ -25,3 +31,4 @@ export default async function Home() {
     </main>
   );
 }
+
