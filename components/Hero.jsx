@@ -82,7 +82,7 @@ const Hero = () => {
             viewport={{ once: false, amount: 0.1 }}
             className='hidden xl:flex xl:absolute xl:top-[200px] xl:right-0'
           >
-            <Image src='hero/plate.png' width={756} height={682} alt='' />
+            <Image src='/hero/plate.png' width={756} height={682} alt='' />
           </motion.div>
         </div>
       </div>
@@ -95,7 +95,7 @@ const Hero = () => {
         viewport={{ once: false, amount: 0.1 }}
         className='hidden xl:flex xl:relative xl:-top-36'
       >
-        <Image src='hero/kompot.png' width={386} height={404} alt='' />
+        <Image src='/hero/kompot.png' width={386} height={404} alt='' />
       </motion.div>
     </section>
   );
