@@ -37,10 +37,10 @@ module.exports = {
         poppins: ['var(--font-poppins)', 'sans-serif'],
       },
       backgroundImage: {
-        hero: 'url(/hero/bg.png)',
-        menu: 'url(/menu/bg.png)',
-        reservation: 'url(/reservation/bg.png)',
-        footer: 'url(/footer/bg.png)',
+        hero: 'url(/bar-ze-smakiem/hero/bg.png)',
+        menu: 'url(/bar-ze-smakiem/menu/bg.png)',
+        reservation: 'url(/bar-ze-smakiem/reservation/bg.png)',
+        footer: 'url(/bar-ze-smakiem/footer/bg.png)',
       },
       boxShadow: {
         primary: '40px 4px 40px 0px rgba(68, 68, 68, 0.25)',
