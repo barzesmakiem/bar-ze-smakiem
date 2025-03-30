@@ -62,7 +62,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles, showZamowienia }) 
           />
 
           {/* links */}
-          <div className='flex flex-col gap-y-8'>
+          <div className='flex flex-col gap-y-8 -mt-100'>
             {links.map((link, index) => (
               <ScrollLink
                 key={index}
