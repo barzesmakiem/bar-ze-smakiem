@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { RiMenu2Line, RiHomeFill } from 'react-icons/ri';
 import { IoCloseOutline } from 'react-icons/io5';
 import { BiSolidFoodMenu } from 'react-icons/bi';
@@ -8,8 +8,6 @@ import { MdShoppingCart } from 'react-icons/md';
 
 import { Link as ScrollLink } from 'react-scroll';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from './ui/button';
 
 const NavMobile = ({ containerStyles, iconStyles, linkStyles, showZamowienia }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +36,7 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles, showZamowienia }) 
       </div>
 
       <aside
-        className={`${
+        className={`$ {
           isOpen ? 'right-0' : '-right-full'
         } bg-[#121212] fixed z-20 w-full p-10 top-0 bottom-0 transition-all duration-500`}
       >
@@ -61,8 +59,8 @@ const NavMobile = ({ containerStyles, iconStyles, linkStyles, showZamowienia }) 
             className="w-auto h-[120px] md:h-[180px] xl:h-[220px]"
           />
 
-          {/* links */}
-          <div className='flex flex-col gap-y-8 -mt-100'>
+          {/* links - added wrapper div with margin-top adjustment */}
+          <div className='flex flex-col gap-y-8' style={{ marginTop: '-200px' }}>
             {links.map((link, index) => (
               <ScrollLink
                 key={index}
