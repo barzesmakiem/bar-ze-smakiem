@@ -48,7 +48,9 @@ const Header = ({ showZamowienia }) => {
           <Nav
             containerStyles='hidden xl:flex gap-x-12 text-white'
             linkStyles='capitalize'
+            showZamowienia={showZamowienia}
           />
+
 
           {/* spacer or button */}
           <div className="hidden xl:block w-[120px]"></div>

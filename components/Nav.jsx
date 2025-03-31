@@ -1,24 +1,14 @@
 'use client';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 
-const Nav = ({ containerStyles, linkStyles }) => {
-  const [showZamowienia, setShowZamowienia] = useState(false);
-
-  useEffect(() => {
-    fetch('/api/oferta')
-      .then(res => res.json())
-      .then(data => setShowZamowienia(data.show))
-      .catch(() => setShowZamowienia(false));
-  }, []);
-
+const Nav = ({ containerStyles, linkStyles, showZamowienia }) => {
   const links = [
     { path: 'home', name: 'strona główna', offset: -50 },
     { path: 'menu', name: 'menu', offset: -50 },
     showZamowienia && { path: 'zamowienia', name: 'zamówienia', offset: -100 },
     { path: 'about', name: 'o nas', offset: -150 },
     { path: 'contact', name: 'kontakt', offset: -100 },
-  ].filter(Boolean); // remove `false` entries if zamowienia is hidden
+  ].filter(Boolean); // filter out false if zamówienia shouldn't show
 
   return (
     <nav className={`${containerStyles}`}>
@@ -30,7 +20,7 @@ const Nav = ({ containerStyles, linkStyles }) => {
           smooth={true}
           offset={link.offset}
           duration={500}
-          className={`${linkStyles}`}
+          className={`${linkStyles} cursor-pointer hover:text-orange transition-colors`}
         >
           {link.name}
         </Link>
