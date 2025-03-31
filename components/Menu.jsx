@@ -14,7 +14,7 @@ const Menu = ({ menuData }) => {
         <div className='max-w-[570px] mx-auto text-left'>
           {menuData.subtext?.facebook ? (
             <h2 className='mb-3'>
-              Znajdź menu na dzień {menuData.subtext.date} na{' '}
+              Menu dnia {menuData.subtext.date} dostępne jest na naszej stronie na {' '}
               <a
                 href="https://www.facebook.com/p/Bar-Ze-Smakiem-61565102367756/"
                 target="_blank"

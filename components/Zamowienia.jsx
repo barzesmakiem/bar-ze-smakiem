@@ -19,7 +19,7 @@ const Zamowienia = ({ data }) => {
           {data.oferta.map(([item, price], i) => (
             <li key={i} className="flex justify-between border-b pb-2">
               <span>{item}</span>
-              <span className="font-semibold">{price}</span>
+              <span className="font-semibold whitespace-nowrap">{price}</span>
             </li>
           ))}
         </ul>
